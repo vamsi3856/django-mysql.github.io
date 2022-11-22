@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-form---Ambrodu-login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-form---Ambrodu.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Ludens-Users---25-After-Register.css' %}">
+</head>
+
+<body>
+    
+    <div class="body p-4" style="padding-top:50px;">
+        
+        <div class="border rounded shadow login-center">
+            <div class="block-heading" style="padding-top: 0px;">
+                <h2 class="text-primary text-center" style="margin-top: 50px;">Register<br></h2>
+            </div>
+            <form action="#" method="post" class="p-4">
+                {% csrf_token %}
+                {% load static %}
+                <div class="form-group"><label>First Name:</label><input class="form-control" type="text" placeholder="First Name" name="first_name" required=""></div>
+                <div class="form-group"><label>Last Name</label><input class="form-control" type="text" placeholder="Last Name" name="last_name" required=""></select></div>
+
+                <div class="form-group"><label><b>Sex:</b></label>
+                    <input type='radio' name='sex' value='male' required>
+                    <label ><b>Male</b></label>
+                    <input type='radio' name='sex' value='female' required>
+                    <label ><b>Female</b></label><br>
+                </div>
+
+                <div class="form-group"><label>Email</label><input class="form-control" type="email" required="" placeholder="Ciudad" name="email"></div>
+                <div class="form-group"><label>Password</label><input class="form-control" type="password" required="" placeholder="Enter Password" name="password"></div>
+                <hr style="margin-top: 30px;margin-bottom: 10px;">
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit"><i class="fas fa-save"></i>&nbsp;Signup</button></div>
+                Already an accounct <a href="http://localhost:8000/login/"> Login </a>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    
+    <script src="https://geodata.solutions/includes/countrystate.js"></script>
+</body>
+
+</html>
